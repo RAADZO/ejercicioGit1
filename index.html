@@ -1,15 +1,110 @@
 <!DOCTYPE html>
-<html lang=”es”>
+<html lang="es">
 <head>
- <meta charset=”UTF-8”>
- <meta http-equiv=”X-UA-Compatible” content=”IE=edge”>
- <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Mi web</title>
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+    p {
+        margin-bottom: 10px;
+        padding-left: 40px;
+    }
+    div {
+        margin-bottom: 20px;
+    }
+ </style>
 </head>
 <body>
+    <script src="./js/main.js"></script>
     <div>
-        <h1>¡Hola mundo!</h1>
-        <p>Esta es mi primera página web.</p>
+        <h1>Introducción</h1>
+        <p>
+            JavaScript se ha convertido en uno de los lenguajes de programación
+            más utilizados en la actualidad debido a la popularización en el uso
+            de todo tipo de soluciones web para cualquier dispositivo electrónico.
+            Este lenguaje nació como una herramienta para gestionar sencillas interacciones, por lo que en la especificación ECMAScript 2015 incorporó
+            las implementaciones necesarias para resolver la complejidad de los
+            algoritmos actuales.
+        </p>
+        <p>
+            En este módulo vamos a aprender de manera totalmente práctica las
+            principales características de ECMAScript 2015, comenzando por el uso
+            de la nueva sintaxis de declaración de variables y constantes, y cómo
+            afecta a su ámbito.
+        </p>
+        <p>
+            Posteriormente, aprenderemos en profundidad cómo usar un conjunto de utilidades que son ampliamente empleadas por los desarrolladores JavaScript: template literals, chaining operator, nullish coalescence,
+            proxies y las populares técnicas de desestructuring.
+        </p>
+        <p>
+            Y, para completar el aprendizaje de ECMAScript 2015, conoceremos
+            en profundidad las nuevas funciones flecha, los métodos de alto nivel
+            para arrays y las diferentes técnicas de manejo de asincronía, imprescindibles en el día a día del desarrollo de aplicaciones con JavaScript.
+        </p>
+    </div>
+    <div>
+        <h1>1. Nueva declaración de variables con “let” y “const”</h1>
+        <p>
+            Vamos a aprender de qué modo la aparición de ECMAScript 2015 ha modificado la forma de declarar variables en JavaScript, tanto sintácticamente como en relación con su contexto en el programa.
+        </p>
+        <p>
+            Comenzaremos por conocer qué es ECMAScript y cómo ha evolucionado hasta llegar a la especificación 6, que ha modificado sustancialmente la forma de programar en JavaScript.
+        </p>
+        <h2>1.1. Introducción a ECMAScript 2015</h2>
+        <p>
+            Vamos a detallar en qué consiste esta normalización del lenguaje JavaScript.
+        </p>
+        <h2>1.2. Declaración de variables con "let"</h2>
+        <p>
+            La declaración de variables con "let" permite definir variables con un ámbito de bloque, lo que mejora la gestión de memoria y evita errores comunes en el uso de variables globales.
+        </p>
+        <h2>1.3. Declaración de constantes con "const"</h2>
+        <p>
+            La declaración de constantes con "const" permite definir valores que no pueden ser reasignados, lo que ayuda a mantener la integridad de los datos a lo largo del código.
+        </p>
+    </div>
+    <div>
+        <h1>2. Template Literals</h1>
+        <p>
+            Los template literals permiten crear cadenas de texto de manera más sencilla y legible, incluyendo la posibilidad de interpolar variables y expresiones.
+        </p>
+        <h2>2.1. Sintaxis básica</h2>
+        <p>
+            La sintaxis básica de los template literals utiliza las comillas invertidas (``) y permite incluir variables utilizando la sintaxis ${variable}.
+        </p>
+        <h2>2.2. Multilínea</h2>
+        <p>
+            Los template literals permiten crear cadenas de texto multilínea sin necesidad de concatenar varias cadenas.
+        </p>
+    </div>
+    <div>
+        <h1>3. Funciones Flecha</h1>
+        <p>
+            Las funciones flecha proporcionan una sintaxis más corta para escribir funciones y no tienen su propio "this", lo que las hace ideales para callbacks y métodos de array.
+        </p>
+        <h2>3.1. Sintaxis básica</h2>
+        <p>
+            La sintaxis básica de una función flecha es (param1, param2) => { ... }.
+        </p>
+        <h2>3.2. Uso de "this"</h2>
+        <p>
+            Las funciones flecha no tienen su propio "this", por lo que heredan el "this" del contexto en el que fueron definidas.
+        </p>
     </div>
 </body>
 </html>
