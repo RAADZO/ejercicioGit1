@@ -1,0 +1,143 @@
+
+
+
+—————- KickOff Data Governance audit 
+
+DO inicia en 2023
+
+DataOffice de Az Seguros, finding anterior que tiene que ver con la interacción con BBVA. El contrato de SLA con BBVA no comprende actividades de DataGovernance. BBVA lo ha solicitado pero la DataOffice de AZS pide la ampliación de la SLA porque no se puede aumentar plantilla sin ese compromiso. Se interviene en ASI en algunos proyectos. Los information Assets por ejemplo se da soporte a BBVA pero la DO no tiene responsabilidad sobre ellos o sobre su glosario. ¿? El APA es desaparecer. El control culture que Alejandro lidera como “TheTrive”, etc. El departamento de Arquitectura (plataforma) no es tanto DataOffice, aunque sean de DataAnalytics. El área es nueva y en la auditoría nos piden como mecánica de trabajo alinear evidencias. Si el diseño está mal no entramos en efectividad de controles o diseños. Si el proceso está mal diseñado se pedirá que se aclare más teóricamente. Con el Depto de Riesgos a veces les dicen que un control es inefectivo, y DO tiene un scope a años vista y aprobados con con comité de dirección primero alinearlo con la estrategia de Dato. Si no se a trabajado es porque no está en el scope del año. La AFRDATA dice que se tiene que tener al 100% en las OEs. Grupo a puesto deadlines pero todo está planificado. El mitigante si ya está aceptado por el Comité.
+
+————— reunión 1 Data Governance
+
+Lista de owners para la formación de IDMC. A partir de octubre. Pedir el plan de acción.
+
+Petición de invitación a las sesiones.
+(Primero hubieron workshops con excels) se nos entregó un roadmap de IDMC en los workshops. 
+
+GDM (modelo de dominio de datos global: Group defined) preparado en IDMC. Estructura con muchas responsabilidades: (AFRDATA) se (relaciona ADOIT). Estructura en temáticas y no departamentos (movimientos directivos o absorción de departamentos no afectan). Es importante por tema de capabilities (GDM) y procesos. No solo sirve para Data (tmbn para procesos y capabilities) nos confirman que hay interacciones con la TO-> Data ha ido informando a TO (Lucia Gal. , Lorenzo) DATA solo tomará tema de ASSETS. La compañía tomara accountability pero ha sido patrocinada por DO.
+
+Dominio -> sub dominio
+(Puede haber distintos dominios compartidos) ejemplo Operational Support. IT OM 80% con P&C. Pero cuando entre un KPI que no sea de OM se repartirán responsabilidades. Ver proceso de aceptación. Se ha cerrado al 90% teniendo áreas que no aplican. En el momento que se detecte un término de negocio no encaja en la asignación se ajustará.
+
+Un dominio se le asigna a un Data Owner (no puede ser director ya que tiene que tener implicaciones reales con el dato y manejar IDMC) se hace un Domain Data Owner ( última responsabilidad y sponsorship y establecer nivel de confianza) con sus propias responsabilidades y nominaban => al experto en el SUBDOMAIN a nivel datos: Data Owner será el que más conoce y el Data Steward su mano derecha. 
+
+Data Management Services (DMS grupo) have validación final con nuestra DO. Ahora el proceso cambiará siendo el manager y la DO los que aprueben los accesos a IDMC. (Control periódico de accesos diseñado TOD, iteraciones) pedir correo de comunicación de transferencia de potestad de permisos.
+
+De los términos iniciales 600 existen varios que están a Pending|Review with area porque hasta no tener IDMC no se podían configurar o representar fácilmente las relaciones. Finetunning.
+
+IDMC inicia a partir de mediados de años con configuraciones aprobaciones altas dependiendo de grupo (caso PowerBI). Se sigue configurando y conectando fuentes de datos.
+
+IDMC se tendrá en operativo en un mes o dos. En el proceso actual se tiene en el Excel.
+IDMC - empresa INFORMÁTICA líder en herramientas de datos.
+IDMC (producción (aún no hay nada) y el preproductivo se borró recomendado por GDP group data officer. Limitaciones de governance. Aunque ahí están los workspaces de las áreas en preproduction en ADP conectados a IDMC preproduction) tallas s-xl. Consumen unidades de cómputos. IPUs informática processing units. Marzo-abril reunión semanal con grupo para configurar IDMC. Theodore Owner Grupo de DMS data management service. A nivel de consumo los gastos no son asumibles si se quieren tener todos las las bases de datos. 
+- glosario - (business terms Iran dentro de los sub dominios. entra el MetaModelo) se parte de los 17 dominios de datos del GDM - con sus sub dominios (jerarquización). Por ejemplo una métrica: se documentó a través de PowerBI. Metadatos: tipo formato , si es dato críticos, padres, nivel de seguridad. Hugo un proyecto con AZTECH y junto al externo NTT hubo un assessment para validar añadir o modificar los metadatos disponibles dentro de IDMC. El meta modelo seguridad aterrizó a Allianz. En el catálogo habrá una relación entre glosario y catálogo. Es un proyecto a futuro. Lo marca AFRDATA y DAMA (modelos de datos teóricos aceptados framework). Desde Grupo de ha iterado mucho entre cómo hacer el link con el glosario global. Desde la OE se creó un metacampo para hacer un link. Ej PRIMA EMITIDA: referencia global de puso en ese campo. Desde Grupo: El glosario global no lo pueden consultar. Los entornos IDMC (grupo y local) no se pueden hablar. Se levantó a grupo. La solución temporal es la DataOffice apoya a los BO a proponer link. ES España y SE global. Otra iniciativa de DattaOfficeEspaña RELACIONES: oncología con que se relacionan las métricas con un término. Las relaciones las hace DO y se pide a las áreas validar. Se han ido a los términos y KPIs importantes. Se simplifica con las relaciones de utilidad. Glosario->Dominio->Su dominio->Métricas->Términos. Los data Owners deberá linkar los términos.
+- Catálogo: listas de BBDD (lista a nivel técnico de esquemas tablas columnas vistas que hay en las BBDD conectadas a IDMC: metadata técnico) ejemplo se conecta ADP (azure). No se conecta SAS. Cada conexión es un consumo. ADP Global (global común para toda la CIA, y contendrá los modelos generales) + WorkspacesADP ( en producción para las áreas: sus propias consultas, transformaciones para sus consumos) se está trabajando en ello. Por ahora están vacíos. Hace una semana que se tienen. También hay un IDMC (preproduction) con Workspaces (azure preproduction) haciendo pruebas documentadas i.e finanzas. El catálogo es tipo de confección a BBDD (synapse SQL pool, azure data lake). Hay 4 conexiones o BBDD o herramienta de ETL (dbt). De tiene en IDMP producción se tiene conectado con ADP ( Data Lake , dbt y DataWarehouse) IDMC entra y trae todos los esquemas de datos. Es un conector de consultas sobre el dbt y no trae datos. Consultas de EPAC se puede tirar cargando 4 días y consumir 10 IPU solo en el momento de carga. En el roadmap de proceso de gobernanta se tiene planeado linkear para los esquemas 97 tablas de réplica… si algún campo está relacionada al glosario. Da una descripción de la tabla y pequeña vista de calidad y no hace falta ir al data profiling seleccionar la tabla y ejecutar el conector. Sino desde aquí vemos porcentaje de nulos únicos y duplicados. IDMC ahora tiene conectado ADP GLOBAL y los workspaces de las áreas donde se tiene: DataWarehouse donde cada esquema corresponde una área va del 1 al 11. Para cada esquema nos trae que tablas existen.
+- Linaje (synapse analytics, dbt: herramientas de ETL) INFORMATION MART de SAS no tiene. En el proyecto CLIENTE CustomerCentrics tiene linaje y hay una política de llevar el modelo de datos a diferentes áreas . Se priorizarán dimensiones por ejemplo POLIZAS. También dentro del DataVault y RoitaVault. Se podrá ver cómo pasa del InfoMartGlobal a cada workspace. Supera los requerimientos de la DGS. Se puede ver hacia atrás y con todas las transformaciones por esquemas se podrá dar utilidad a la calidad teniendo una foto de la calidad en cada capa. Se tiene para cada esquema (workspace:datawarehouse) las transformaciones que hay dentro. Es un notebook trae los campos con los que trabaja y el tratamiento del linaje. Se tendrá en desde la primer capa a la última. Modelos de crosssell, churn. No solo entran BBDD y también modelos. En SAS decomm iniciativa para que las áreas migren sus modelos. 
+- Calidad - data quality (reglas negocio) y data profiling (técnicas vienen implementadas y las vistas) (módulo propio dentro de IDMC que te da una imagen de cada tabla por cada campo (reglas técnicas). También se pueden agregar reglas de negocio (si se quieren modificar cosas a nivel de datos habrá que ir a ADP). No pueden mostrarse fronts visuales de las tablas porque en ADP se tienen encriptados y enmascarados los datos por temas de privacidad y seguridad. Reglas vigentes que hay que cumplir. No se pueden crear reglas sobre campos anonimizados. AZ P&R debería aprobar su vista. Data quality: reglas de negocio. Data profiling: las reglas default de IDMC + las de negocio ha escrito. Se tienen 32 reglas de calidad con finance. Salió un issue con la DGS en temas de provisiones técnicas y están implementando reglas de calidad en el INFORMATION MART SAS. Cada área tendrá su carpeta. Otra carpeta de DO hará reglas generales. Cada equipo podrá tomar las reglas de la carpeta global. Ej. fecha tendrá numero de dígitos, si campo nulo, conociendo regex, sql.. Contains hasta 2099. Concatenación de reglas. Depende las necesidades de negocio. En DataProfiling: se ejecutan estas reglas y cada área será autónoma. El perfilado es conocer en una pantalla como es la calidad de la tabla a nivel técnico. Se debe seleccionar la conexión a ADP, cada área tendrá la conexión a su workspace para no tener problemas de acceso. Ej. INFORMATION MART SAS tabla Agentes, se puede modular a una sample de filas. Run conlleva un coste. Da estadísticas (como en el gráfico del catálogo) da patrones. Las reglas se definen con variables puesto que son reutilizables y esa regla se ejecuta. Regla compare dates puedes escoger las reglas. Las reglas entre varias tablas se puede hacer. Pero se debe analizar la viabilidad si los casos de uso de calidad deben tener conexiones a otras bases de datos. Ej. Actuarial trabaja por su lado con su data quality framework. Siempre se monitorea el consumo. Se puede tomar una muestra o acotaciones. Caso de uso de actuarial fechas posteriores a 2022.
+
+aparte de esos módulos están el de 
+- proyectos. pero esos se llevan por wave
+- Modelo IA se lleva por Azure. Y en el futuro tendríamos IA Governance.
+
+Glosario y proceso de gobernanta. Excel que se validaba con negocio y si hubiera otra área la que debería aprobar o validar en un power bi owner. Primero tendrá que encontrar dentro de que subdominio está ese término de negocio al que pertenece y debes meter ese data owner y data steward y se dará a enviar. (Se subirán debes forma masiva) ya asignados en reuniones de CDM. Esto creará una notificación y el DataOwner entrará a IDMC ( y por eso el data owner no es un director). Entonces el PowerBi owner podrá colocar y relacionar el término con el KPI. Se validará que se siguieron los pasos y se documentaron. Cuando esté power bi lo suba a IDMC donde los KPIS de mi área se aprueban aquí y los de otras áreas deberán aprobarlo. DO debe tener controles. Pero habrá un control de KPIS importantes de la compañía ( mecanismos de control para no saltar estos pasos en la asignación) push de auditoría.. seguir el procedimiento de DO. Punto a mirar en las auditorías. 
+
+SAS Decom roadmap: con externos SDG. La replica de SAS actualmente ya se tiene en ADP y ADP ya está conectada en IDMC. por ende ya se tiene su catálogo. La réplica de la librería común de toda la compañía. (cuando s e complete se tendrá el linaje y el catálogo)
+1. Réplica SAS 
+2. Reconstruir código (se conseguirá el linaje, no hay documentación)
+3. Reconstrucción entera de todo SAS ( no solo réplica) 2026-2027
+
+ADP se le conectan las fuentes de datos externas. Hosts, codeoscopic si se compra. Y todo llega como en un contenedor desestructurado. Con synapse SQL pool se pasa por varios esquemas (los datos pasan con dbt en cada capa) ejemplo de CUSTOMERS se encontraron las 25 tablas de los sistemas origen que se pasaron al data lake. Se trabajan y modelan para terminar en un INFORMATION MART (capa de consumo para las áreas algo así como un SAS ) -> ADP workspaces de las áreas CONSUMPTION LAYERS. (Cada área a su vez tendrá un DataLake y un Synapse SQL pool, porque cada área querrá dejar lo que considere y con synaps sql pool trabajarían con las tablas. Entonces cada área podrá tomar dejar su propio DataLake y del INFORMATION MART. El nos workspaces de las áreas está Synapse Analytics ( mas user friendly, se puede entrar desde internet) 
+
+Hasta 2027 el INFORMATION MART estará en construcción. Pero la réplica del SAS desde el Information mart del SAS (no conecta con nada) y con esto poco a poco quienes se conectaban a SAS vayan migrando a ADP (réplica que se actualiza diariamente). De momento esta réplica son solo tablas y ahí entra el trabajo de los externos para construir el linaje y poder hacer todo el trabajo de catálogo (metadatos técnicos ; por ejemplo ahora mismo no podemos saber de qué campo de epac viene el campo 25 de THUNICA)
+- 1er oleada réplica en ADP
+- 2da oleada reconstruir las capas en base al modelo DATA VAULT
+Así todos consumiremos de ahí y estará todo bien construido en el INFORMATION MART de ADP. SAS Decomm se construirá con el nuevo modelo de Grupo. 
+¿?SDG no hay trazabilidad del dato.
+No hay ownerships claros de las tablas actuales de SAS (responsabilidad), quizás algunos sí. Nadie coge el ownership de THUNICA. Se dejará de consumir y si se quiere buscar un owner se consumirán muchos recuerdos. Se comentó con riesgos.
+
+Los fallos que actualmente podrían surgir desde epac hasta SAS los lleva Allianz Technology con el resto de sistemas. Todo el levantamiento de sistemas lo llevan ellos. Mirar con arquitectura.
+
+
+
+———————————-
+
+Pedir comunicaciones con Lucia. Debe estar en AFRDATA solo Data Assets.
+
+Pedir comunicaciones con riesgo sobre el ownership de SAS. Ver con Isaac Sánchez y Marc Marcelo. Se presentará el 30 de septiembre a comité de dirección. Ver si hay aprobación.
+
+Metodología para seleccionar datos que van a IDMC.
+
+Ver permisos de datos enmascarados con los de arquitectura.
+
+Incluirnos a los workshops
+
+Pedir una invitación a reuniones semanal de configuración de IDMC con grupo.
+Revisar metamodelo con NTT o pedir extracción de IDMC. El metamodelo empezó con el Excel y las unidades de negocio. Hay identificados casos de términos en el glosario con In Review porque en Excel no se podían tener.
+
+Pedir global glossaries y de grupo. 
+
+Pedir correros de comunicación a grupo sobre el tema de no poder realizar link a glosario local (se levantó hace un año) están en conversaciones. Porque el owner no puede ser independiente. 
+
+Pedir reporte de cobro mensual de IPU.
+
+Reporte de DataFitness. Pedir sesión por temas de metodología de cálculo. Se levantó con grupo que la herramienta no puede ser aplicado. Se hace en foros.
+
+Steerco con los stakeholders de Data. Se presentará el material del workshop. Procesoso puesto en confluence. (Revisarlo en las evidencias) guía con estrategias R&R.
+
+Análisis o proceso de definir reglas de calidad para poder conectar una BBDD nueva a IDMC. Por ejemplo GDS pide tener un reporte obligatorio por temas de calidad.
+
+Propio proceso de levantamiento de calidad de datos. Ejemplo si 45% de dirección de cliente de una tabla. Se puede minar y hacer un reporte. En este sentido grupo no define nada y como DO la responsabilidad es de tener un catálogo y glosario y dar una herramienta. Todo es federado. El owner es el responsable. Como mínimo los global use cases deben tener un mínimo de reglas picadas. El plan de acción se debe levantar la mano. Aunque habrá un plan general por framework de calidad que se está diseñando. Ganar la complicidad e irse saliendo de la carga operativa de IDMC. En 2026 de establecerá un seguimiento y se irá Step by step solo grupo pide el data Fitness.
+
+Invitado a GlobalDataDay presentación en noviembre. Se derivan a otras OEs como Austria para apoyarlos en demos de IDMC.
+
+Revisar FINANCE y CUSTOMER casos de uso de ejemplo. La calidad del dato ahora mismo no tiene el mismo progreso que el glosario. Es porque se ha avanzado escalonadamente empezando por la configuración de IDMC.
+
+Los costes de IDMC y ADP se queda el coste en el budget dentro de la DataOffice. En el futuro se pretende implementar FinOps para escalar y repartir el coste entre las áreas. Ver con Johnathan y el CIO podemos ver esto. Se está montando el framework. Global no da un reporte de consumos pero se ha acordado que una vez en cada dos semanas se les envían el consumo que se va teniendo. 
+
+Así como con las EUC. En las AUDITS debemos apoyar el uso del catálogo y procesos de PowerBIs
+
+Pedir framework y formación de calidad que se dio a ACTUARIAL. Data comunity de octubre. En confluence también hay un data quality framework. Alineados con Grupo y Solvencia II. Dimensiones en casos de uso.
+
+Hablar con arquitectura. Herramientas de calidad. En ADP dbt las reglas de calidad que se aplican en las transformaciones directamente y no en IDMC (solo pensado para datos explotables) estos son los DataContracts.
+
+Debemos reunirnos con segunda línea Gustavo. Controles NFRM. Alinear con Rohit para no levantar lo mismo. Solo verificar que se haya amoldado la cobertura por encima de ML.
+
+*******Data Observability - year over year, is link to quality and link to trust. Valid data represention
+*******Requirements: stackeholders: what is people really asking for. Stop teaching tools - teach the techniques. Technology agnostic. Data Savy: levantamiento 
+*******Data value that is collected. Métricas
+*******métricas y reglas de data. Audit data analytics tests inside controls.
+
+
+—————————
+
+Gobierno del Dato.
+Pilares 
+Tech - gov dato - cultura
+Marzo 2023 inicia con Nico y Alejandro.
+Con un externo hubo un caso de uso de SalesDashboard… finanzas lo creaba pero pertenecía a Comercial. Impulso estratégico (Veit) para crear Dashboards de forma más eficiente y salir de DIALLZ. Principales stakeholders que afectaban a este caso de uso.
+
+Se detectan los pain points: silos, acceso a datos, basado modelo de datos no actual, mala calidad.
+
+Se divide a la compañía en gobiernos de datos. Externo CatGemini. De acuerdo a mapa de valor, los KPIs más importantes que había. Se hizo RACI con próximos pasos. Lo primero fue elaborar el glosario (evolución de Excel) se hicieron workshops: se nominaron owners y stewards, este es el primer dominio de datos 2024. Se aprovecha el proyecto de comercial y toda la compañía busca hacer dashboards en PowerBi. 
+
+Data Office aprovecha el impulso y se suma al Proceso de gestión de demanda de proyectos (OM-). Se va a Wave y se identifican los proyectos DataDriven. Primero atacar a donde están los ojos de la compañía. La capacidad premium que vea toda la compañía. Que los principales reportes muestren la misma cantidad. 
+
+Llegaron muchos casos de uso, Compliance, P&R (reporte de fishing: no había owners) etc. la estructura inicial se va quedando corta y se opta por ser prácticos y ágiles. Se toma manual compañía y se vio todo el scope de la compañía: no se va por departamento (jerarquías verticales) - sino por temática (se presenta a Eva Orell Operaciones (se fue)). Domain data owner, data owner y steward.
+
+El Gobierno del Dato: Glosario y Catálogo.
+
+Equipos: 
+GDPR - Data Provacy
+Security level - política de seguridad
+Wave - TO OM 
+
+
+ Se crea un PowerBI:
+1. gobernanza pura de negocio: no se puede desplegar nada hasta que esté el okey de gobernanza. Use case owner: manda business terms e identifica a quienes pertenecen las métricas. Plantilla v.1 Excel asigna términos a una persona. Tomaba el nombre del kpi exacto de su PBI y hacía una descripción de ese término. Tenía que ver si ya existía la referencia que con la que ya se había aprobado. Si no se tenía (new): si existía en glosario global lo referenciaba y asignaba a una persona, y en (linaje) daba evidencia de donde salía: tabla (las soluciones definitiva será IDMC). Había preguntas a) nivel de seguridad y b) GDPR: Uno de los temas que salieron de las reuniones mensuales con DataPrivacy: se debe identificar en categorías de sensibilidad (nvl GDPR a validar con Champion de GDPR). Dominio alternativo por si la primer asignación era rechazada. IDMC automatizará todo. En PowerBI: a) BUSINESSTERMS nombre canon, alias, pólizas en vigor (polizas45), descripción . b) MÉTRICA fórmulas que valga la pena. Datos externos: se identificaron áreas que compran datos externos (personal lines, motor o Finance) se distinguió y tiene un flujo. CombineRatio de los datos externos se queda en Finance pero el de la compañía estará asignado a quien le corresponda. CRITICAL DATA ELEMENT: etiqueta para identificarlos, se lleva a su data owner: y se lleva a un pequeño comité para un mecanismo de control de voto de estar de acuerdo: DataOwnerCouncil. Format: time, moneda. Relación vertical ( hasta llegar a subdominio o dominio) o Related Content (relación establecida un caos en Excel, se frena hasta IDMC) no se pondrá a las áreas a mapear todas las relaciones, se opta por que DataOffice las coloque y las áreas lo aprueben, también se opta por subir al glosario los términos relacionados a los critical data element para ir escalando orgánicamente a posterior. SecurityLevel: se alineó con Emiliano las categorías. Se colaboró con AZTech quien contrata a NTT para un assessment: que por principios DAMA estén todos los datos necesarios  capturados. Se identifica como un término está afectado por n reglas de grupo o por leyes/regulaciones (prueba piloto a potenciar a futuro). Cuando hay responsabilidad compartida se tienen distintos data domain owners. La guía de uso está en la propia plantilla pero ahora se traslada a Confluence para el nuevo proceso IDMC. Se hicieron guías útiles sobre cómo debéis de llenarse (libro blanco) casos deber ser, no usar infinitivos. Mirar casos de uso antes de definir. IDMC da nombre ID, y para linkar local a global se coloca el de global. Cuando hay caso de uso nuevo aprobado tiene estados (published: aprobado, draft: se está trabajando o revisando los casos de uso, in review: se hacen sesiones con las áreas para actualizar glosario o conceptos para llevar a DataOwnerCouncil, aproved: ok para subir a IDMC. Flujos timelines: pruebas técnicas y pruebas de gobierno del dato. DOC se empezarán a hacer en octubre noviembre, se invitarán a los owners relacionados para validar el término (aquellos marcados como datos clave), la comunicación se queda en IDMC pero se pueden seguir métricas para recibir notificaciones. Primero depende de dar las formaciones. Y antes se dependía del GDM. IDMC NUEVO PROCESO: en confluence está la nueva gobernanza (automatizado) flujo: el PBI Owner crea el power BI como data set (tipo activo que crea en IDMC) hace link a tablas de catálogo que consume (ADP conectado a workspaces de las áreas). Entre PBI e IDMC hay un conector pero por temas de privacidad de grupo no está permitido (solo hay un tenant para todas las OEs) en este DataSet documenta los KPIs clave y los asocia al glosario: ya sea Término o Métrica (si existe linka, si no crea una propuesta, rellena los demás metadatos, se asocia al subdominio que toca y notifica al DataOwner para aceptar (el PowerBI Owner asocia a su KPI) o el DataOwner del subdominio rechazar) existen SLAs y es ilimitada la cantidad de Owners/stewards. Se tienen flujos, fotos, y ejemplos. Formaciones DataQualityFramework, matriz RACI. SCOPING STRATEGY: objetivo plan estratégico de completar el glosario. Ahora: board data, info assets, power bi, global use cases. Futuro: ML , ADP , regulatory reporting. Hasta ahora se han centrado CoreData: a través de los PowerBI ( se han conseguido muchos de finanzas, comercial… pero RIESGOS ; que no han hecho aún un PBI, no han capital de solvencia. El sig pasó INFORMATION ASSETS sep 2024 (alineación con Emiliano DORA) documentar lo que se considera “un dato que merece la pena obtener en la compañía” se fueron a todas las áreas y se ingesta todos los activos de información, por ejemplo se aprovechó se llegó al área de riesgos. En ese ejercicio se marcaron datos no validados por otras áreas para una segunda revisión que luego se validarán con los Owner ( marcados to review). InfoAssets van a grandes números (números de rentabilidad) assessment de segunda línea de defensa RIESGOS (problemas con regulador sobre las técnicas de STR\CER, echa en falta por ejemplo KPIs de finance) se pidió identificar los golden récords de todos los domains y subdomains tener en 2025 todos (2024 y 2023 se fue práctico para cumplir con FRDATA). Tema catálogo al linkar las tablas dependientes del PowerBI (. Datafitness: global use cases ya tienen la definición del global business glosario, pero se debe hacer una localización y linkarlo a global. Se presentará en el SteerCo y se tiene proponer a futuro el tema de a) reporting regulatorio: se identificará con los Owners los principales KPIS de principales áreas (plan 2026 aún no aterrizado a milestones). b) 
+2. gobernanza técnica.
+
+
+Formalizar el comité: Data Owner Coincil
+GDM global data model
+Pedir assessment de NTT 
+¿Dónde se miran los casos de uso ?
